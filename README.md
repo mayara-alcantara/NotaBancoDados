@@ -1,1 +1,18 @@
 # NotasBancoDados
+# Bancos de dados, relacionais e não relacionais.
+ ## Aspecto geral
+♦ Bancos de dados relacionais, como o próprio nome sujere, nada mais é que um modelo de banco direcionado ao forte relacionamento entre suas entidades (abstração do mundo real em forma de tabela), <br>
+
+♦ Bancos não relacionais, surgiram para suprir necessidades que surgiram a partir da forma com que os dados escalavam, gerando uma demanda que não seria viável escalar no modelo relacional.<br>
+
+**Mas, quando utilizar de cada tipo de banco?**<br>
+
+Depende, de qual contexto será utilizado e  quais necessidades temos de resolver baseado na "regra de negócio" previamente estabelecida.<br>
+Partindo do cenário onde sabemos examente quais dados serão inseridos no banco e  evidenciado a necessidade de termos consistência quanto a estrutura dos mesmos, o banco de dados relacional é utilizado, já quando temos a necessidade de armazenar dados de maneira "menos estruturada", onde precisamos armazenar videos e fotos, por exemplo, utiliza-se o modelo não relacional, no entanto mesmo sendo um esquema não relacional, há certos cuidados a serem tomados, para que não seja criado um aglutinado de dados que resulte em um mal aproveitamento do mesmos, sendo necessário definir previamente parâmetros mínimos dentro da estruta para que estes dados possam ser recuperados de maneira eficiente.<br>
+
+A manutenção de um banco de dado envolve diversos aspectos, existe métricas que possibilitam medir a integridade, funcionamento e desempenho do banco...<br>
+Aferir tais parâmetros afim de procurar melhorias deve ser algo constante, o modo com o que a literatura nos traz alguns aspectos, como por exemplo na normalização dos dados, deve ser algo a se olhar com cautela, onde por exemplo um dado que possuí “baixíssima” probabilidade de ser alterado gere uma tabela extra, eventualmente gerará uma foreign key, em um cenário onde estes dados estão dispostos em servidores diferentes sendo buscados por uma infinidade de JOINS, em clund por exemplo, pode gerar um baixo desempenho, banco de dados é uma área de tecnologia onde tem de se ponderar diversos fatores e considerar a melhor forma para trazer maior desempenho a aplicação.<br>
+
+Independente do banco de dados a ser utilizado (SQL ou NoSQL), a configuração do banco deve ser personalizada conforme a aplicação, diferente de uma receita de bolo onde temos algo extremamente definido, baixar e instalar um banco de dados simplesmente seguindo um tutorial não é garantia de bom desempenho, como dito anteriormente a manutenção de um banco de dados envolve diversos aspectos que vão desde: avaliar cenário em busca de requisitos, regras de negócio, estruturação de entidades, avaliar gargalos e possíveis falhas de segurança, garantir a confiabilidade dos dados; acompanhar o desempenho do banco é o mínimo do que se espera ao manipular dados, ou seja, você não quer seus dados por aí, não é mesmo?<br>
+
+É fato que a tecnologia cresce de maneira acelerada, esse avanço tecnológico gera um acumulo de dados crescentes, manipular, organizar, proteger e gerenciar a forma com que tratamos nossos dados é de suma importância para garantir um bom desempenho para nossas aplicações, ter uma base sólida em SQL (Structure Query Language) e uma visão que contemple os aspectos que envolvem banco de dados é essencial, algo que não posso deixar de pontuar é a respeito da documentação que envolve todo o processo de elaboração e criação de um banco, o que facilita possíveis manutenções e um direcionamento mais assertivo a um cenário específico, em uma escala menor é de grande valia, imagine em um banco já escalado.
